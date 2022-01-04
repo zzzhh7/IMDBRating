@@ -3,16 +3,12 @@ package edu.bristol;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.io.*;
-
 public class IMDBRatingTest
 {
     @Test
     public void testAverageRating()
     {
-        float averageRating = 0;
+        float averageRating;
         IMDBRating rater = new IMDBRating();
 
         averageRating = rater.addNewRating(2);
