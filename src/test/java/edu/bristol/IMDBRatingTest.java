@@ -1,7 +1,8 @@
 package edu.bristol;
 
-import static org.junit.Assert.assertTrue;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.io.*;
@@ -15,9 +16,9 @@ public class IMDBRatingTest
         IMDBRating rater = new IMDBRating();
 
         averageRating = rater.addNewRating(2);
-        assertTrue("Adding 1st rating: average should be 2.0", averageRating == 2.0);
+        assertTrue(averageRating == 2.0, "Adding 1st rating: average should be 2.0");
 
         averageRating = rater.addNewRating(4);
-        assertTrue("Adding 2nd rating: average should be 3.0", averageRating == 3.0);
+        assertTrue(averageRating == 3.0, "Adding 2nd rating: average should be 3.0");
     }
 }
